@@ -15,7 +15,7 @@ def mobile_management():
         "deviceName": "Google Pixel 3",
 
         # Set URL of the application under test
-        "app": "bs://c6e4dfaf8a84d45e690c236928c13af186fd32ad",
+        "app": "bs://sample.app",
 
         # Set other BrowserStack capabilities
         'bstack:options': {
