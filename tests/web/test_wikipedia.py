@@ -6,6 +6,7 @@ def test_search():
     browser.open('/')
 
     with step('Type search'):
+        browser.element('#searchLanguage').element("[value='en']").click()
         browser.element('#searchInput').type('Appium')
 
     with step('Verify content found'):
