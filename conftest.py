@@ -7,7 +7,7 @@ import allure_commons
 from utils import attach
 from appium.options.android import UiAutomator2Options
 from selene import browser, support
-from selenium import webdriver
+from appium import webdriver
 
 
 @pytest.fixture()
@@ -31,6 +31,7 @@ def android_mobile():
             "http://hub.browserstack.com/wd/hub",
             options=options
         )
+
     browser.config.timeout = float(os.getenv('timeout', '10.0'))
     browser.config._wait_decorator = support._logging.wait_with(context=allure_commons._allure.StepContext)
 
