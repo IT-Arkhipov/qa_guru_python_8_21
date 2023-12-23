@@ -1,7 +1,7 @@
 import os
 import pytest
 import allure
-import config
+from config import settings
 import allure_commons
 
 from utils import attach
@@ -21,8 +21,8 @@ def android_mobile():
             "buildName": "browserstack-build-1",
             "sessionName": "BStack first_test",
 
-            "userName": f'{config.user_name}',
-            "accessKey": f'{config.access_key}'
+            "userName": f'{settings.user_name}',
+            "accessKey": f'{settings.access_key}'
         }
     })
 
